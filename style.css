@@ -1,0 +1,126 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #f9a8d4, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.love-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: center;
+  width: 350px;
+  position: relative;
+}
+
+.love-heart {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: #ff6b81;
+  position: relative;
+  transform: rotate(-45deg);
+  border-radius: 50% 50% 0 0;
+  animation: beat 1s infinite;
+}
+
+.heart:after, .heart:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff6b81;
+}
+
+.heart:before {
+  left: 50px;
+  top: 0;
+}
+
+.heart:after {
+  top: 50px;
+  left: 0;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+}
+
+.love-message h1 {
+  font-size: 24px;
+  color: #ff6b81;
+}
+
+.love-message p {
+  font-size: 16px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.surprise-btn {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.surprise-btn:hover {
+  background-color: #ff4757;
+}
+
+.surprise {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  text-align: center;
+  display: none;
+}
+
+.surprise-content h2 {
+  font-size: 24px;
+  color: #ff4757;
+}
+
+.surprise-content p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.close-btn {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
